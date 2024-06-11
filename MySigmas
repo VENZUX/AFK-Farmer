@@ -109,17 +109,6 @@ local function updateObjects()
     local MiddleElevatorTrigger = MissionObjects:FindFirstChild("MiddleElevatorTrigger")
     local BottomElevatorTrigger = MissionObjects:FindFirstChild("BottomElevatorTrigger")
     local InfTowerNext = game.Workspace:FindFirstChild("LobbyTeleport") and game.Workspace.LobbyTeleport:FindFirstChild("Interaction")
-    local InfTowerBoss = game.Workspace:FindFirstChild("Boss_Gate") and game.Workspace.Boss_Gate:FindFirstChild("Interactions") and game.Workspace.Boss_Gate.Interactions:FindFirstChild("Bounds")
-    local InfTowerBoss = game.Workspace:FindFirstChild("Boss_Gate") and game.Workspace.Boss_Gate:FindFirstChild("Interactions")
-
-    if InfTowerBoss then
-        for _, child in pairs(InfTowerBoss:GetChildren()) do
-            if child.Name == "Bounds" and child:IsA("BasePart") then
-                child.CFrame = Hrp.CFrame
-            end
-          end
-       end
-    end
 
     if InfTowerNext then
         InfTowerNext.CFrame = Hrp.CFrame
